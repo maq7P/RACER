@@ -1,6 +1,13 @@
 import '../assets/styles/index.css';
-const abc = () => {
-    console.log(1+2);
-}
+import '../assets/scss/index.scss';
+import Click from './modules/clickEffects';
 
-abc();
+window.addEventListener('DOMContentLoaded', () => {
+    new Click('.btn-start', 
+    `
+    box-shadow:0px 0px 12px 2px rgba(147,190,187,0.57);
+    -webkit-box-shadow:0px 0px 12px 2px rgba(147,190,187,0.57);
+    -moz-box-shadow:0px 0px 12px 2px rgba(147,190,187,0.57);
+    `
+    ).init();
+})
